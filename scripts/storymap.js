@@ -82,6 +82,7 @@ $(window).on('load', function() {
   /**
    * Loads the basemap and adds it to the map
    */
+  /** Desactivo esto para cargar mi mapa
   function addBaseMap() {
     var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
     L.tileLayer.provider(basemap, {
@@ -94,7 +95,14 @@ $(window).on('load', function() {
       accessToken: trySetting('_tileProviderApiKey', '')
     }).addTo(map);
   }
-
+*/
+    function addBaseMap() {
+    var basemap = L.tileLayer('https://www.madridxix.es/visor/general/teselas/{z}/{x}/{y}.png', {
+      minZoom: 14,
+      maxZoom: 19,
+      attribution: '<i><a href="https://www.madridxix.es/index.php/acerca-de">Álvaro Ruiz Cuevas</a> vectorizó y georreferenció. Levantamientos originales del Inst. Geográfico y Estadístico (IGN)</i>'
+    }).addTo(map);
+  }
   function initMap(options, chapters) {
     createDocumentSettings(options);
 
