@@ -1,0 +1,58 @@
+@media screen and (min-width: 768px) {
+  /* Para el pc: */
+
+  #narration {  /* Color controlado por google sheet */
+    height: 700px;
+    /* Gris translúcido */
+    width: 50%;
+    /* Ancho del 50% */
+    border-radius: 10px;
+    /* Bordes ligeramente redondeados */
+    box-sizing: border-box;
+    /* Asegura que el padding y border no afecten el ancho total del elemento */
+    /*padding: 10px; /* Espaciado interno, opcional */
+    margin: 0 auto;
+    /* Centra el elemento horizontalmente */
+    position: relative;
+    left: -45%;
+    transform: translateX(-50%);
+    z-index: 200;
+  }
+
+  #map {
+    width: 1000px;
+    height: 100vh;
+    border: 0;
+    z-index: 0;
+  }
+/* -->
+  #title {
+    height: 125px;
+    background-color: rgba(128, 128, 128, 0.5);
+    /* Gris translúcido */
+    /****width: 50%;
+    /* Ancho del 50% */
+    /****border-radius: 10px;
+    /* Bordes ligeramente redondeados */
+    /*****box-sizing: border-box;
+    /* Asegura que el padding y border no afecten el ancho total del elemento */
+    /*padding: 10px; /* Espaciado interno, opcional */
+    /****margin: 0 auto;
+    /* Centra el elemento horizontalmente */
+    /****position: relative;
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 200;
+  }
+*/
+  .leaflet-control-attribution {
+    visibility: visible;
+  }
+
+  #marco {
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    pointer-events: none;
+  }
+}

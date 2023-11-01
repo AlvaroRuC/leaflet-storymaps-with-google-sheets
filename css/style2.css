@@ -3,6 +3,7 @@ body {
   margin: 0px;
   font-family: "Helvetica", sans-serif;
   overflow: hidden;
+  width: 100%;
 }
 
 #map {
@@ -16,7 +17,7 @@ body {
 
 #narration {
   position: absolute;
-  top: 203px;
+  top: 10px;
   width: 100vw;
   height: calc(100vh - 203px);
   z-index: 80;
@@ -29,6 +30,9 @@ body {
   height: 100%; /* Adjust to fit max Description length, one setting for all; alternative is 100% */
   overflow-y: scroll;
   overflow-x: hidden;
+  margin: auto;
+  /*background-color: rgba(128, 128, 128, 0.5); /* Gris translúcido */
+  border-radius: 10px; /* Bordes ligeramente redondeados */
 }
 
 #top {
@@ -43,11 +47,11 @@ body {
   padding-top: 150px;
 }
 
-#title {
+/*#title {
   position: absolute;
   left: 0;
-  top: 203px;
-  background-color: white;
+  top: 100px;
+  background-color: rgba(255, 255, 255, 0.452);
   width: 100vw;
   z-index: 100;
   margin: 0;
@@ -55,7 +59,7 @@ body {
   visibility: hidden;
   font-weight: bold;
   text-align: center;
-}
+}*/
 
 .chapter-container {
   /* margin + padding = chapterContainerMargin in script.js */
@@ -116,6 +120,7 @@ a.source:visited {
   text-align: left;
   font-size: 11pt;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.568);
 }
 
 .in-focus {
@@ -131,7 +136,7 @@ a.source:visited {
 }
 
 .leaflet-marker-icon {
-  opacity: 0.75;
+  opacity: 0.3;
 }
 
 /*
@@ -140,6 +145,7 @@ a.source:visited {
 */
 .marker-active {
   background-position: -72px 0 !important;
+  opacity:0.75
 }
 
 /* Storymap logo image above the title */
